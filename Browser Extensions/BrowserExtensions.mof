@@ -1,0 +1,16 @@
+[ SMS_Report     (TRUE),
+  SMS_Group_Name ("Browser Extensions"),
+  SMS_Class_ID   ("BrowserExtensions"),
+  Namespace ("\\\\\\\\.\\\\root\\\\cimv2") ]
+
+class CM_BrowserExtensions_v1 : SMS_Class_Template
+{
+    [SMS_Report (TRUE),key ]  uint32     Counter;
+    [SMS_Report (TRUE)     ]  string     Name;
+    [SMS_Report (TRUE)     ]  DateTime   FolderDate;
+    [SMS_Report (TRUE)     ]  string     FolderName;
+    [SMS_Report (TRUE)     ]  string     ProfilePath;
+    [SMS_Report (TRUE)     ]  string     Browser;
+    [SMS_Report (TRUE)     ]  DateTime   ScriptLastRan;
+    [SMS_Report (TRUE)     ]  string     Version;
+};

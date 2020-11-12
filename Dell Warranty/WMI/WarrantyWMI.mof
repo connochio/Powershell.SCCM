@@ -1,0 +1,28 @@
+[ SMS_Report     (TRUE),
+  SMS_Group_Name ("Warranty Details"),
+  SMS_Class_ID   ("WMIWarranty_Device"),
+  Namespace ("\\\\\\\\.\\\\root\\\\cimv2")]
+
+class CM_WarrantyDevice_v1 : SMS_Class_Template
+{
+    [SMS_Report (TRUE),key ]  string     Uid;
+    [SMS_Report (TRUE)     ]  DateTime   ShipDate;
+    [SMS_Report (TRUE)     ]  string     Model;
+    [SMS_Report (TRUE)     ]  string     ServiceTag;
+    
+};
+
+
+[ SMS_Report     (TRUE),
+  SMS_Group_Name ("Warranty Entitlements"),
+  SMS_Class_ID   ("WMIWarranty_Entitlements"),
+  Namespace ("\\\\\\\\.\\\\root\\\\cimv2")]
+
+class CM_WarrantyLevels_v1 : SMS_Class_Template
+{
+    [SMS_Report (TRUE),key ]  string     ItemNumber;
+    [SMS_Report (TRUE)     ]  DateTime   StartDate;
+    [SMS_Report (TRUE)     ]  DateTime   EndDate;
+    [SMS_Report (TRUE)     ]  string     WarrantyLevel;
+
+};

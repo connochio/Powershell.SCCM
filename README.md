@@ -6,7 +6,16 @@ Instructions on how to use or implement these are contained within the relevant 
 
 ## Browser Extensions
 
-A script to find broswer extensions installed on a machine, and add them to a new WMI class to be reported by system inventory tools such as SCCM.
+A script to find browser extensions installed on a machine across all user profiles, and add them to a new WMI class to be reported by system inventory tools such as SCCM.
+
+Currently include:
+* Microsoft Edge
+* Google Chrrome
+* Mozilla Firefox
+* Brave Browser
+* Microsoft Edge Chromium
+
+If new browsers are required, please log an issue.
 
 ## Dell Warranty
 

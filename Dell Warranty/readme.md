@@ -30,6 +30,9 @@ Windows 8
 5. Change 'Run:' to 'Hidden'
 6. Change 'Programs can run:' to 'Whether or not a user is logged on'
 6. Change 'Run mode:' to 'Run with administrative rights'
+7. Select next to proceed.
+8. (Optional) Set dependancies for operating systems that this package applies to
+9. Finish the program creation
 
 #### To enable SCCM collection of this new inventory information:
 
@@ -37,4 +40,10 @@ Windows 8
 2. Open the default client settings, and select 'Hardware Inventory' from the left-hand list
 3. Click 'Set Classes ...' and then click 'Import'
 4. In the file selection that opens, select the companion .mof for the script you have deployed
-4.
+5. In the prompt that appears ensure 'Import both hardware inventory classes and hardware inventory class settings'is selected, then click 'Import'
+6. Ensure the new hardware inventory class ('Warranty' or 'Warranty Details') is not checked within the default client settings
+7. Close the hardware inventory classes window, and then the default client settings window.
+8. Open the relevant client settings for the assets that ou want to report on, and under 'Hardware Inventory > Set Classes', ensure theh new inventory class is checked.
+
+Once the implementation has been been completed, it may take up to 7 days for information to start being reported within the hardware inventory for assets.  
+This may change based on the interval set for clients to update their client settings and/or policies.
